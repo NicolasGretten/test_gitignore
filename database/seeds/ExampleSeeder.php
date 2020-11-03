@@ -14,42 +14,53 @@ class ExampleSeeder extends Seeder
      */
     public function run()
     {
-        DB::connection('data')->table('example')->insert([
-            'id'            => substr('usr_' . md5(Str::uuid()),0 ,25),
-            'username'      => 'john.doe@example.com',
-            'password'      => Hash::make('john'),
-            'role'          => 'admin',
-            'created_at'    => Carbon::now(),
-            'updated_at'    => Carbon::now()
+        DB::connection('data')->table('images')->insert([
+            'id'                    => substr('cdn_' . md5(Str::uuid()),0 ,25),
+            'thumbnail_filename'    => Str::uuid() . '.jpg',
+            'original_filename'     => Str::uuid() . '.jpg',
+            'image_filename'        => Str::uuid() . '.jpg',
+            'height'                =>random_int(768, 1800),
+            'width'                 =>random_int(800, 2046),
+            'checksum'              => hash('sha256', Str::uuid()),
+            'deleted_at'            => NULL,
+            'created_at'            => Carbon::now(),
+            'updated_at'            => Carbon::now()
         ]);
-
-        DB::connection('data')->table('users')->insert([
-            'id'            => substr('usr_' . md5(Str::uuid()),0 ,25),
-            'username'      => 'jane.doe@example.com',
-            'password'      => Hash::make('jane'),
-            'role'          => 'customer',
-            'created_at'    => Carbon::now(),
-            'updated_at'    => Carbon::now()
+        DB::connection('data')->table('images')->insert([
+            'id'                    => substr('cdn_' . md5(Str::uuid()),0 ,25),
+            'thumbnail_filename'    => Str::uuid() . '.jpg',
+            'original_filename'     => Str::uuid() . '.jpg',
+            'image_filename'        => Str::uuid() . '.jpg',
+            'height'                =>random_int(768, 1800),
+            'width'                 =>random_int(800, 2046),
+            'checksum'              => hash('sha256', Str::uuid()),
+            'deleted_at'            => NULL,
+            'created_at'            => Carbon::now(),
+            'updated_at'            => Carbon::now()
         ]);
-
-        DB::connection('data')->table('users')->insert([
-            'id'            => substr('usr_' . md5(Str::uuid()),0 ,25),
-            'username'      => 'john.smith@example.com',
-            'password'      => Hash::make('john'),
-            'role'          => 'customer',
-            'created_at'    => Carbon::now(),
-            'updated_at'    => Carbon::now(),
-            'deleted_at'    => Carbon::now()
+        DB::connection('data')->table('images')->insert([
+            'id'                    => substr('cdn_' . md5(Str::uuid()),0 ,25),
+            'thumbnail_filename'    => Str::uuid() . '.jpg',
+            'original_filename'     => Str::uuid() . '.jpg',
+            'image_filename'        => Str::uuid() . '.jpg',
+            'height'                =>random_int(768, 1800),
+            'width'                 =>random_int(800, 2046),
+            'checksum'              => hash('sha256', Str::uuid()),
+            'deleted_at'            => Carbon::now(),
+            'created_at'            => Carbon::now(),
+            'updated_at'            => Carbon::now()
         ]);
-
-        DB::connection('data')->table('users')->insert([
-            'id'            => substr('usr_' . md5(Str::uuid()),0 ,25),
-            'username'      => 'jane.smith@example.com',
-            'password'      => Hash::make('jane'),
-            'role'          => 'admin',
-            'created_at'    => Carbon::now(),
-            'updated_at'    => Carbon::now(),
-            'deleted_at'    => Carbon::now()
+        DB::connection('data')->table('images')->insert([
+            'id'                    => substr('cdn_' . md5(Str::uuid()),0 ,25),
+            'thumbnail_filename'    => Str::uuid() . '.jpg',
+            'original_filename'     => Str::uuid() . '.jpg',
+            'image_filename'        => Str::uuid() . '.jpg',
+            'height'                =>random_int(768, 1800),
+            'width'                 =>random_int(800, 2046),
+            'checksum'              => hash('sha256', Str::uuid()),
+            'deleted_at'            => NULL,
+            'created_at'            => Carbon::now(),
+            'updated_at'            => Carbon::now()
         ]);
     }
 }

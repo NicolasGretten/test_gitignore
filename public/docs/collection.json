@@ -1,0 +1,11 @@
+{
+    "variables": [],
+    "info": {
+        "name": "cdn \/ api.hopn.space",
+        "_postman_id": "bf559fd3-1a20-4ddd-af13-81bc8438a1f8",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [],
+    "auth": true
+}
