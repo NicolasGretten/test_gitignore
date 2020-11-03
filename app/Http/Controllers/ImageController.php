@@ -23,6 +23,9 @@ class ImageController extends ControllerBase
      */
     public function index(Request $request)
     {
+        $authors = Author::all();
+
+       return $this->successResponse($authors);
         return response()->json('Please read the API documentation at ' . env('APP_URL') . '/docs', 200);
     }
 }
